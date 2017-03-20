@@ -3,6 +3,7 @@ package repio.shoot.detail;
 import java.awt.Color;
 import java.util.Iterator;
 
+import repio.principale.utile.Rotation;
 import repio.shoot.Bullet;
 import repio.shoot.TirMissile;
 
@@ -13,7 +14,7 @@ public class Tir_rectiligne_explo extends TirMissile {
     private int compteur = 0;
 
     public Tir_rectiligne_explo(int posx, int posy, int direction) {
-        this.init(posx,posy,1,0, 27, direction,false,1,15,false,Color.BLUE);
+        this.init(posx,posy,50,4,380, 17, direction, new Rotation(),false,Color.RED);
         ajoutBalles();
     }
 
