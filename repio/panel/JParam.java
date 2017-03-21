@@ -13,14 +13,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 import repio.shoot.TirMissile;
-import repio.shoot.detail.Tir_etoile_spin_8;
-import repio.shoot.detail.Tir_rectiligne_one;
-import repio.shoot.detail.Tir_rectiligne_three;
-import repio.shoot.detail.Tir_rectiligne_two;
-import repio.shoot.detail.Tir_sin_one;
-import repio.shoot.detail.Tir_sin_three;
-import repio.shoot.detail.Tir_sin_two;
-import repio.shoot.detail.Tir_spirale_multi;
+import repio.shoot.detail.*;
 
 public class JParam extends JPanel {
 
@@ -134,7 +127,8 @@ public class JParam extends JPanel {
 
 	public void initShootList() {
 		TirMissile[] listeMissile = new TirMissile[] { new Tir_rectiligne_one(400, 100, 60), new Tir_rectiligne_two(400, 100, 60), new Tir_rectiligne_three(400, 100, 60),
-				new Tir_sin_one(400, 100, 60), new Tir_sin_two(400, 100, 60), new Tir_sin_three(400, 100, 60) , new Tir_etoile_spin_8(400, 200),new Tir_spirale_multi(400, 300, 60)};
+				new Tir_sin_one(400, 100, 60), new Tir_sin_two(400, 100, 60), new Tir_sin_three(400, 100, 60) , new Tir_etoile_spin_8(400, 200)
+				,new Tir_spirale_one_left(400, 300, 60),new Tir_spirale_two_left(400, 300, 60),new Tir_spirale_three_left(400, 300, 60),new Tir_spirale_multi(400, 300, 60)};
 				shootListe = new JComboBox<TirMissile>(listeMissile);
 	}
 

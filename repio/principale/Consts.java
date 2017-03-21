@@ -10,5 +10,8 @@ public final class Consts {
 	public static final String TIR_WAVE_3 = "Sinusoide 3";
 	public static final String TIR_STAR_SPIN_8 = "Etoile 8";
 	public static final String TIR_SPIRALE_MULTI = "Spirale";
+	public static final String TIR_SPIRALE_1 = "Spirale 1";
+	public static final String TIR_SPIRALE_2 = "Spirale 2";
+	public static final String TIR_SPIRALE_3 = "Spirale 3";
 }
 
