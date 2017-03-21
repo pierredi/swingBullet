@@ -3,6 +3,7 @@ package repio.shoot.detail;
 import java.awt.Color;
 import java.util.Iterator;
 
+import repio.principale.Consts;
 import repio.principale.utile.Rotation;
 import repio.shoot.Bullet;
 import repio.shoot.TirMissile;
@@ -15,24 +16,8 @@ public class Tir_spirale_two_left extends TirMissile {
     private int compteur=0;
 
     public Tir_spirale_two_left(int posx, int posy, int direction) {
-        this.init(posx,posy,2,4,540, 7, direction, new Rotation(),false,Color.MAGENTA);
+        this.setName(Consts.TIR_SPIRALE_2);
+        this.init(posx,posy,2,4,540, 7, direction, new Rotation(true,true,false,1,8,15),false,Color.MAGENTA);
         ajoutBalles();
     }
-
-    public void update() {
-        compteur++;
-        Iterator<Bullet> iter = getBalles().iterator();
-        while (iter.hasNext()) {
-            Bullet courant = iter.next();
-            courant.update();
-            if (!courant.isAlive()) {
-                iter.remove();
-            }
-        }
-        if(compteur%getFrequence()==0){
-            updateRotation();
-            ajoutBalles();
-        }
-    }
-
 }
