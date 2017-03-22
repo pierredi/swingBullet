@@ -53,6 +53,9 @@ public class JParam extends JPanel {
 	private JComboBox<TirMissile> shootListe;
 	private JButton charger = new JButton("Charger");
 
+    private JTextField balles_compteur = new JTextField();
+
+
 	public JParam() {
 		super();
 		init();
@@ -90,7 +93,7 @@ public class JParam extends JPanel {
 		sinusoideGroupPanel.add(sinusoide_oui);
 		sinusoideGroupPanel.add(sinusoide_non);
 
-		params.setLayout(new GridLayout(16, 2));
+		params.setLayout(new GridLayout(17, 2));
 		params.add(new JLabel("Position x: "));
 		params.add(champs_posx);
 		params.add(new JLabel("Position y: "));
@@ -123,6 +126,8 @@ public class JParam extends JPanel {
 		params.add(shootListe);
 		params.add(new JLabel());
 		params.add(charger);
+        params.add(new JLabel("total de balles"));
+        params.add(balles_compteur);
 	}
 
 	public void initShootList() {
@@ -566,8 +571,17 @@ public class JParam extends JPanel {
 		return champs_vitesse_Balles;
 	}
 
-	/**
+    public JTextField getBalles_compteur() {
+        return balles_compteur;
+    }
+
+    public void setBalles_compteur(JTextField balles_compteur) {
+        this.balles_compteur = balles_compteur;
+    }
+
+    /**
 	 * @param champs_vitesse_Balles the champs_vitesse_Balles to set
+
 	 */
 	public void setChamps_vitesse_Balles(JTextField champs_vitesse_Balles) {
 		this.champs_vitesse_Balles = champs_vitesse_Balles;

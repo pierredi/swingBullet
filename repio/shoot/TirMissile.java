@@ -45,10 +45,6 @@ abstract public class TirMissile {
 	 *            Direction du tir.
 	 * @param rotation
 	 *            Flag controlant la rotation du canon
-	 * @param minSpin
-	 *            Vitesse min de rotation.
-	 * @param maxSpin
-	 *            Vitesse max de rotation.
 	 * @param wave
 	 *            Flag de gestion des trajectoires sinusoïdales
 	 * @param couleur
@@ -66,6 +62,11 @@ abstract public class TirMissile {
 		this.setRotation(rotation);		
 		this.setWave(wave);
 		this.setColorShoot(couleur);
+		//initialisation du pool de balles
+        /**for (int cpt = 0; cpt < nbBalles; cpt++) {
+            Bullet proj = new Bullet();
+            balles.add(proj);
+        }**/
 	}
 
 	public void ajoutBalles() {
@@ -75,7 +76,8 @@ abstract public class TirMissile {
 		}
 
 		for (int cpt = 0; cpt < nbBalles; cpt++) {
-			Bullet proj = new Bullet(this.posX, this.posY, this.speed, direction - angle + cpt * angleBase);
+			Bullet proj = new Bullet();
+			proj.init(this.posX, this.posY, this.speed, direction - angle + cpt * angleBase);
 			balles.add(proj);
 		}
 	}

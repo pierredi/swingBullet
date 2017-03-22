@@ -91,6 +91,7 @@ public class BulletController {
         param.getSinusoide_oui().setSelected(tir.isWave());
         param.getSinusoide_non().setSelected(!tir.isWave());
         param.getColorChooser().setSelectedColor(tir.getColorShoot());
+		param.getBalles_compteur().setText(""+tir.getBalles().size());
 	}
 	
 	private void chargerMissile(){		

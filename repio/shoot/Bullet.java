@@ -21,7 +21,17 @@ public class Bullet {
 	private double siny = 0.0d;
 	private boolean wave = false;
 
-	public Bullet(int x, int y, double speed, double direction) {
+	public Bullet() {
+		this.posx = 0;
+		this.posy = 0;
+		this.speed = 0;
+		this.direction = 0;
+		this.beta = Math.toRadians(direction) + Math.PI / 2;
+		this.sinx = 0;
+		this.siny = 0;
+	}
+
+	public void init(int x, int y, double speed, double direction) {
 		this.posx = x;
 		this.posy = y;
 		this.speed = speed;

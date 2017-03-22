@@ -57,7 +57,8 @@ public class Tir_rectiligne_4_5 extends TirMissile {
         }
 
         for (int cpt = 0; cpt<getNbBalles(); cpt++){
-            Bullet proj = new Bullet(getPosX(),getPosY(),2.2,
+            Bullet proj = new Bullet();
+            proj.init(getPosX(),getPosY(),2.2,
                     getDirection() - getAngle()/2 + cpt * angleBase);
             getBalles().add(proj);
         }
