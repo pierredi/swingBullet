@@ -113,6 +113,9 @@ abstract public class TirMissile {
 		return result.toString();
 	}
 
+	/**
+	 * Mise a jour de la rotation
+	 */
 	public void updateRotation() {
 		if (rotation.isSensHoraire()) {
 			setDirection(getDirection() + rotation.getSpin());
